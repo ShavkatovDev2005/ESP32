@@ -1,13 +1,6 @@
-#include <Arduino.h>
 #include <WS2812FX.h>
 #include <U8g2lib.h>
-
-#ifdef U8X8_HAVE_HW_SPI
-#include <SPI.h>
-#endif
-#ifdef U8X8_HAVE_HW_I2C
 #include <Wire.h>
-#endif
 
 #define LED_COUNT 1
 #define LED_PIN 2
@@ -42,7 +35,7 @@ void loop(void) {
 
   // Yozuvni chiqarish
   u8g2.drawStr(10, 10, "Salom");
-  u8g2.drawStr(10, 25, "Dunyo");
+  u8g2.drawStr(10, 20, "Dunyo");
   u8g2.sendBuffer();                   
 
   delay(500);
